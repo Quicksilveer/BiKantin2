@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Dokumentasi Perancangan Sistem - BI-KANTIN</title>
+   <!-- Tailwind CSS CDN -->
+   <script src="https://cdn.tailwindcss.com"></script>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans leading-relaxed">
+
+
+   <!-- Header / Hero Section -->
+   <header class="bg-gradient-to-r from-emerald-600 to-teal-700 text-white py-16 px-6 text-center shadow-md">
+       <div class="max-w-4xl mx-auto">
+           <span class="bg-emerald-500 text-emerald-900 text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider">Proyek Mandiri / Portofolio Sistem</span>
+          
+           <!-- Informasi Mata Pelajaran & Guru Pengampu -->
+           <div class="mt-4 mb-2 flex flex-wrap justify-center items-center gap-4 text-emerald-100 text-sm md:text-base font-medium">
+               <span class="bg-emerald-800/40 px-3 py-1 rounded-lg border border-emerald-500/30">
+                   <i class="fas fa-book mr-1.5"></i> Pemodelan Berorientasi Objek
+               </span>
+               <span class="bg-emerald-800/40 px-3 py-1 rounded-lg border border-emerald-500/30">
+                   <i class="fas fa-user-tie mr-1.5"></i> Guru Pengampu: Nia Adiyanti, S.Kom.
+               </span>
+           </div>
+
+
+           <h1 class="text-4xl md:text-5xl font-extrabold mt-3 mb-3">Kantin Online (BI-KANTIN)</h1>
+           <p class="text-emerald-100 text-lg max-w-2xl mx-auto mb-6">Dokumentasi lengkap perancangan sistem berbasis UML (Use Case, Activity, Sequence Diagram) dan Basis Data (ERD).</p>
+           <a href="https://github.com/username/bi-kantin-documentation" target="_blank" class="inline-flex items-center gap-2 bg-gray-900 text-white px-6 py-3 rounded-xl font-medium shadow-lg hover:bg-gray-800 transition">
+               <i class="fab fa-github text-xl"></i> Lihat Repository GitHub
+           </a>
+       </div>
+   </header>
+
+
+   <!-- Main Container -->
+   <main class="max-w-6xl mx-auto px-6 py-12 space-y-16">
+
+
+       <!-- 1. RINGKASAN SISTEM -->
+       <section class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
+           <h2 class="text-2xl font-bold text-gray-900 mb-4 flex items-center gap-3">
+               <i class="fas fa-info-circle text-emerald-600"></i> Ringkasan Studi Kasus
+           </h2>
+           <p class="text-gray-600 mb-4">Sistem Kantin Online (BI-KANTIN) dirancang untuk mempermudah transaksi jual-beli di lingkungan sekolah/kampus. Aplikasi ini memiliki 3 aktor utama:</p>
+           <div class="grid md:grid-cols-3 gap-6 mt-6">
+               <div class="bg-emerald-50 p-5 rounded-xl border border-emerald-100">
+                   <h3 class="font-bold text-emerald-800 mb-2"><i class="fas fa-user-shield"></i> Admin</h3>
+                   <p class="text-sm text-emerald-700">Mengelola CRUD Menu Makanan/Minuman, Manajemen Akun Pengguna, dan memantau seluruh pesanan masuk.</p>
+               </div>
+               <div class="bg-teal-50 p-5 rounded-xl border border-teal-100">
+                   <h3 class="font-bold text-teal-800 mb-2"><i class="fas fa-user-graduate"></i> Siswa (Pembeli)</h3>
+                   <p class="text-sm text-teal-700">Melakukan registrasi/login, memilih katalog makanan, membuat pesanan (checkout), dan memantau status pesanan secara real-time.</p>
+               </div>
+               <div class="bg-cyan-50 p-5 rounded-xl border border-cyan-100">
+                   <h3 class="font-bold text-cyan-800 mb-2"><i class="fas fa-cash-register"></i> Kasir / Petugas</h3>
+                   <p class="text-sm text-cyan-700">Memeriksa daftar pesanan masuk, memvalidasi pembayaran, dan mengubah status pesanan menjadi lunas atau siap diambil.</p>
+               </div>
+           </div>
+       </section>
+
+
+       <!-- 2. USE CASE DIAGRAM -->
+       <section class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
+           <h2 class="text-2xl font-bold text-gray-900 mb-4 flex items-center gap-3">
+               <i class="fas fa-project-diagram text-emerald-600"></i> Use Case Diagram
+           </h2>
+           <p class="text-gray-600 mb-6">Diagram ini menggambarkan fungsionalitas utama sistem serta interaksi antara aktor (Admin, Siswa, Kasir) dengan sistem BI-KANTIN.</p>
+          
+           <div class="bg-gray-100 border-2 border-dashed border-gray-300 rounded-xl p-6 text-center">
+               <img src="assets/use-case.png" alt="Use Case Diagram BI-KANTIN" class="max-h-[500px] mx-auto rounded-lg shadow-md mb-4 object-contain" onerror="this.src='https://placehold.co/800x400?text=Upload+Gambar+Use+Case+Diagram+ke+Folder+Assets'">
+               <p class="text-xs text-gray-500 italic">Letakkan file gambar dengan nama `use-case.png` di dalam folder `assets/`</p>
+           </div>
+       </section>
+
+
+       <!-- 3. ACTIVITY DIAGRAMS -->
+       <section class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
+           <h2 class="text-2xl font-bold text-gray-900 mb-4 flex items-center gap-3">
+               <i class="fas fa-random text-emerald-600"></i> Activity Diagrams (Alur Kerja)
+           </h2>
+           <p class="text-gray-600 mb-6">Berikut adalah rincian diagram aktivitas untuk setiap proses bisnis utama di dalam sistem:</p>
+          
+           <div class="grid md:grid-cols-2 gap-8">
+               <!-- Activity 1 -->
+               <div class="border border-gray-200 rounded-xl p-5 flex flex-col justify-between">
+                   <div>
+                       <h3 class="font-bold text-lg text-gray-800 mb-2">1. Alur Autentikasi (Login & Logout)</h3>
+                       <p class="text-sm text-gray-600 mb-4">Proses masuk pengguna berdasarkan role masing-masing (Admin, Siswa, Kasir).</p>
+                   </div>
+                   <div class="bg-gray-100 p-3 rounded-lg text-center">
+                       <img src="assets/activity-login.png" alt="Activity Login" class="max-h-64 mx-auto rounded object-contain" onerror="this.src='https://placehold.co/400x250?text=Activity+Login'">
+                   </div>
+               </div>
+
+
+               <!-- Activity 2 -->
+               <div class="border border-gray-200 rounded-xl p-5 flex flex-col justify-between">
+                   <div>
+                       <h3 class="font-bold text-lg text-gray-800 mb-2">2. Alur CRUD Menu (Admin)</h3>
+                       <p class="text-sm text-gray-600 mb-4">Aktivitas admin dalam menambah, mengedit, dan menghapus data menu makanan/minuman.</p>
+                   </div>
+                   <div class="bg-gray-100 p-3 rounded-lg text-center">
+                       <img src="assets/activity-menu.png" alt="Activity Menu" class="max-h-64 mx-auto rounded object-contain" onerror="this.src='https://placehold.co/400x250?text=Activity+CRUD+Menu'">
+                   </div>
+               </div>
+
+
+               <!-- Activity 3 -->
+               <div class="border border-gray-200 rounded-xl p-5 flex flex-col justify-between">
+                   <div>
+                       <h3 class="font-bold text-lg text-gray-800 mb-2">3. Alur Pemesanan (Siswa)</h3>
+                       <p class="text-sm text-gray-600 mb-4">Aktivitas siswa memilih katalog, memasukkan ke keranjang, dan melakukan checkout pesanan.</p>
+                   </div>
+                   <div class="bg-gray-100 p-3 rounded-lg text-center">
+                       <img src="assets/activity-pesanan.png" alt="Activity Pesanan" class="max-h-64 mx-auto rounded object-contain" onerror="this.src='https://placehold.co/400x250?text=Activity+Pemesanan+Siswa'">
+                   </div>
+               </div>
+
+
+               <!-- Activity 4 -->
+               <div class="border border-gray-200 rounded-xl p-5 flex flex-col justify-between">
+                   <div>
+                       <h3 class="font-bold text-lg text-gray-800 mb-2">4. Alur Validasi Pembayaran (Kasir)</h3>
+                       <p class="text-sm text-gray-600 mb-4">Aktivitas kasir memeriksa pesanan masuk dan memvalidasi pembayaran hingga siap diambil.</p>
+                   </div>
+                   <div class="bg-gray-100 p-3 rounded-lg text-center">
+                       <img src="assets/activity-kasir.png" alt="Activity Kasir" class="max-h-64 mx-auto rounded object-contain" onerror="this.src='https://placehold.co/400x250?text=Activity+Validasi+Kasir'">
+                   </div>
+               </div>
+           </div>
+       </section>
+
+
+       <!-- 4. SEQUENCE DIAGRAMS -->
+       <section class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
+           <h2 class="text-2xl font-bold text-gray-900 mb-4 flex items-center gap-3">
+               <i class="fas fa-stream text-emerald-600"></i> Sequence Diagrams (Interaksi Objek)
+           </h2>
+           <p class="text-gray-600 mb-6">Sequence diagram menunjukkan pengiriman pesan (message) antar objek/komponen dalam skenario pemesanan makanan.</p>
+          
+           <div class="space-y-6">
+               <div class="border border-gray-200 rounded-xl p-6">
+                   <h3 class="font-bold text-lg text-gray-800 mb-2">Sequence Diagram: Proses Pemesanan dan Pembayaran</h3>
+                   <p class="text-sm text-gray-600 mb-4">Menggambarkan interaksi antara Aktor Siswa, Antarmuka Web, Controller, Database, dan Aktor Kasir saat transaksi berlangsung.</p>
+                   <div class="bg-gray-100 p-4 rounded-lg text-center">
+                       <img src="assets/sequence-pemesanan.png" alt="Sequence Diagram Pemesanan" class="max-h-[400px] mx-auto rounded object-contain" onerror="this.src='https://placehold.co/800x350?text=Upload+Sequence+Diagram+Pemesanan'">
+                   </div>
+               </div>
+           </div>
+       </section>
+
+
+       <!-- 5. ENTITY RELATIONSHIP DIAGRAM (ERD) -->
+       <section class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
+           <h2 class="text-2xl font-bold text-gray-900 mb-4 flex items-center gap-3">
+               <i class="fas fa-database text-emerald-600"></i> Entity Relationship Diagram (ERD)
+           </h2>
+           <p class="text-gray-600 mb-6">Perancangan struktur basis data relasional untuk mendukung aplikasi BI-KANTIN (mencakup tabel <code>users</code>, <code>menus</code>, <code>orders</code>, dan <code>order_details</code>).</p>
+          
+           <div class="bg-gray-100 border-2 border-dashed border-gray-300 rounded-xl p-6 text-center">
+               <img src="assets/erd.png" alt="ERD BI-KANTIN" class="max-h-[450px] mx-auto rounded-lg shadow-md mb-4 object-contain" onerror="this.src='https://placehold.co/800x400?text=Upload+Gambar+ERD+ke+Folder+Assets'">
+               <p class="text-xs text-gray-500 italic">Letakkan file gambar dengan nama `erd.png` di dalam folder `assets/`</p>
+           </div>
+       </section>
+
+
+   </main>
+
+
+   <!-- Footer -->
+   <footer class="bg-gray-900 text-gray-400 py-8 text-center text-sm mt-16">
+       <p>&copy; 2026 Projek Mandiri BI-KANTIN. Dibuat dengan semangat Rekayasa Perangkat Lunak.</p>
+   </footer>
+
+
+</body>
+</html>
